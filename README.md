@@ -1,4 +1,4 @@
-# 🐧 X
+# 🐧 Linux
 Chroot setup for termux
 
 This repo contains automated chroot setup scripts for installing distros on Android devices. These will work with **Termux** or any **root-supported terminal**.  
