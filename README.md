@@ -1,7 +1,8 @@
-# 🐧 Debian Sid chroot setup
+# 🐧 X
+Chroot setup for termux
 
-This repo contains an automated Debian Sid chroot setup script for Android devices that will work with **Termux** or any **root-supported terminal**.  
-Easily manage, and interact with a full Debian Sid environment on your Android phone. Also It uses nsenter and unshare to avoid issues with mouting and unmounting android directories.
+This repo contains automated chroot setup scripts for installing distros on Android devices. These will work with **Termux** or any **root-supported terminal**.  
+Easily manage, and interact with a full linux distro environment on your Android phone. Also It uses nsenter and unshare to avoid issues with mouting and unmounting android directories.
 
 
 ---
@@ -28,11 +29,11 @@ Easily manage, and interact with a full Debian Sid environment on your Android p
 	  - External SD card path (if any)  
 	  - Optional **Fish shell** installation  
 -  Provides management scripts in specified script directory:
-	  - `start-debian.sh` → Starts Debian chroot  
-	  - `stop-debian.sh` → Stops the environment and unmounts binds  
-	  - `remove-debian.sh` → Cleanly removes everything  
-	  - `backup-debian.sh` → Creates a tarball backup.
-	  - `snapshot-debian.sh` → Makes a quick filesystem snapshot  
+	  - `start-[DISTRO_NAME].sh` → Starts chroot  
+	  - `stop-[DISTRO_NAME].sh` → Stops the environment and unmounts binds  
+	  - `remove-[DISTRO_NAME].sh` → Cleanly removes everything  
+	  - `backup-[DISTRO_NAME].sh` → Creates a tarball backup
+	  - `snapshot-[DISTRO_NAME].sh` → Creates filesystem snapshots
 
 > Note: If container is moved to a different directory then it's path variable needs to be changed in all the scripts.
 
@@ -42,9 +43,9 @@ Easily manage, and interact with a full Debian Sid environment on your Android p
 
 #### Just run this in ur rooted terminal if you are in magisk
 ```sh
-/data/adb/magisk/busybox wget --no-check-certificate -q "https://raw.githubusercontent.com/tstmax67/debian-sid-chroot-termux/refs/heads/main/setup.sh"; sh setup.sh
+/data/adb/magisk/busybox wget --no-check-certificate -q "https://raw.githubusercontent.com/tstmax67/chroot-termux/refs/heads/main/setup.sh"; sh setup.sh
 ```
 #### Or if using KSU run this
 ```sh
-/data/adb/ksu/bin/busybox wget --no-check-certificate -q "https://raw.githubusercontent.com/tstmax67/debian-sid-chroot-termux/refs/heads/main/setup.sh"; sh setup.sh
+/data/adb/ksu/bin/busybox wget --no-check-certificate -q "https://raw.githubusercontent.com/tstmax67/chroot-termux/refs/heads/main/setup.sh"; sh setup.sh
 ```
